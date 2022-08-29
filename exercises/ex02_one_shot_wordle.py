@@ -26,7 +26,7 @@ while i < len(secret_word):
                 does_character_exist = True 
             else:
                 rechecking_indices += 1
-        if does_character_exist == True:  # adding a yellow box if the letter is in the word
+        if does_character_exist is True:  # adding a yellow box if the letter is in the word
             wordle_result += YELLOW_BOX 
         else:  # adding a white box if the ltter is not in the word
             wordle_result += WHITE_BOX
