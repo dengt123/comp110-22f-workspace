@@ -4,9 +4,9 @@ __author__: str = "730607227"
 
 secret_word: str = "python"
 
-guess: str = input("What is your %s-letter guess? " % len(secret_word))  # receiving guess from user
+guess: str = input(f"What is your {len(secret_word)}-letter guess? ")  # receiving guess from user
 while len(guess) != len(secret_word):  # making sure the guess is the correct length
-    guess = input("That was not %s letters! Try again: " % len(secret_word)) 
+    guess = input(f"That was not {len(secret_word)} letters! Try again: ") 
 
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
