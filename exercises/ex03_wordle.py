@@ -1,9 +1,6 @@
-""""EX03 - Structured Wordle."""
+"""EX03 - Structured Wordle."""
 
 __author__ = "730607227"
-
-from ast import Str
-
 
 def contains_char(search_string: str, letter: str) -> bool:
     """Determine if a letter is contained within a string."""
@@ -34,12 +31,14 @@ def emojified(guess: str, secret: str) -> str:
         i += 1
     return output_string
 
+
 def input_guess(expected_length: int) -> str:
     """Obtaining a guess of the correct length."""
     guess: str = input(f"Enter a {expected_length} character word: ")
     while len(guess) != expected_length:
         guess = input(f"That wasn't {expected_length} chars! Try again: ")
     return guess
+
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
@@ -50,7 +49,7 @@ def main() -> None:
     while turn < 7 and has_user_won is False:  # running each turn
         print(f"=== Turn {turn}/6 ===")
         guess: str = input_guess(len(secret_word))
-        print(emojified(guess,secret_word))
+        print(emojified(guess, secret_word))
         if guess == secret_word:
             has_user_won = True
         else:
@@ -60,6 +59,7 @@ def main() -> None:
         print(f"You won in {turn}/6 turns!")
     else:
         print("X/6 - Sorry, try again tomorrow!")
+
 
 if __name__ == "__main__":
     main()
