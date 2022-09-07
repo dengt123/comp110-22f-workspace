@@ -12,6 +12,7 @@ def contains_char(search_string: str, letter: str) -> bool:
         i += 1
     return False
 
+
 def emojified(guess: str, secret: str) -> str:
     """Returns string of emojis based on the same system as exercise 2."""
     assert len(guess) == len(secret)
@@ -24,7 +25,7 @@ def emojified(guess: str, secret: str) -> str:
         if guess[i] == secret[i]:
             output_string += GREEN_BOX
         else:
-            if contains_char(secret,guess[i]):
+            if contains_char(secret, guess[i]):
                 output_string += YELLOW_BOX
             else:
                 output_string += WHITE_BOX
