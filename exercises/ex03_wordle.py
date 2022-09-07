@@ -2,6 +2,7 @@
 
 __author__ = "730607227"
 
+
 def contains_char(search_string: str, letter: str) -> bool:
     """Determine if a letter is contained within a string."""
     assert len(letter) == 1
