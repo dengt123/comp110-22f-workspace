@@ -2,8 +2,9 @@
 
 __author__ = "730607227"
 
+
 def all(inputList: list[int], checkNumber: int) -> bool:
-    """check if all elements of a list are equal to the check number."""
+    """Check if all elements of a list are equal to the check number."""
     if len(inputList) == 0:
         return False
     i: int = 0
@@ -13,8 +14,9 @@ def all(inputList: list[int], checkNumber: int) -> bool:
         i += 1
     return True
 
+
 def max(input: list[int]) -> int:
-    """find the maximum value in a list."""
+    """Find the maximum value in a list."""
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     max: int = input[0]
@@ -25,8 +27,9 @@ def max(input: list[int]) -> int:
         i += 1
     return max
 
+
 def is_equal(list1: list[int], list2: list[int]) -> bool:
-    """return true if lists are equal, false otherwise"""
+    """Return true if lists are equal, false otherwise."""
     if len(list1) != len(list2):
         return False
     i: int = 0
