@@ -31,7 +31,7 @@ def sub(input_list: list[int], start: int, end: int) -> list[int]:
         start = 0
     if end > len(input_list): 
         end = len(input_list)
-    for i in range(start,end):
+    for i in range(start, end):
         output.append(input_list[i])
     return output
     

@@ -38,7 +38,7 @@ def test_concat_two_more_lists() -> None:
 
 def test_sub_negative_start() -> None:
     """Testing with a negative start index."""
-    assert sub([1, 2, 3],-3, 2) == [1, 2]
+    assert sub([1, 2, 3], -3, 2) == [1, 2]
 
 
 def test_sub_example() -> None:
