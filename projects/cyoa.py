@@ -7,6 +7,7 @@ player: str
 CLAPPING_HANDS: str = "\U0001F44F"
 
 def main() -> None:
+    """Running the game."""
     global points
     game_active = True
     greet()
@@ -25,12 +26,14 @@ def main() -> None:
     
 
 def greet() -> None:
+    """Greeting function."""
     global player
     print("Welcome to this coinflip simulator. Your points will be based on the number of coinflips you can accurately predict.")
     player = input("What is your name? ")
 
 
 def start_streak(points: int) -> int:
+    """Streak gamemode. See how long of a streak the user can go for."""
     streak: int = 0
     streak_alive = True
     while streak_alive:
@@ -46,6 +49,7 @@ def start_streak(points: int) -> int:
 
 
 def start_game() -> None:
+    """Individual coin flips."""
     global points
     coinflip = randint(1,2)
     guess = int(input(f"{player}, would you like to guess 1) Heads or 2) Tails? "))
