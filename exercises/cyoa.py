@@ -1,3 +1,4 @@
+"""EX06 - Choose your own adventure."""
 __author__ = "730607227"
 
 from random import randint
@@ -6,12 +7,13 @@ points: int = 0
 player: str
 CLAPPING_HANDS: str = "\U0001F44F"
 
+
 def main() -> None:
     """Running the game."""
     global points
     game_active = True
     greet()
-    while game_active == True:
+    while game_active:
         print(f"You have {points} points.")
         choice: str = input(f"What would you like to do, {player}? \n A) Streak Mode \n B) Free Play \n C) Exit \n")
         if choice == "A":
@@ -34,10 +36,11 @@ def greet() -> None:
 
 def start_streak(points: int) -> int:
     """Streak gamemode. See how long of a streak the user can go for."""
+    global player
     streak: int = 0
     streak_alive = True
     while streak_alive:
-        coinflip = randint(1,2)
+        coinflip = randint(1, 2)
         guess = int(input(f"{player}, would you like to guess 1) Heads or 2) Tails? "))
         if guess == coinflip:
             streak += 1
@@ -50,14 +53,15 @@ def start_streak(points: int) -> int:
 
 def start_game() -> None:
     """Individual coin flips."""
-    global points
-    coinflip = randint(1,2)
+    global points, player
+    coinflip = randint(1, 2)
     guess = int(input(f"{player}, would you like to guess 1) Heads or 2) Tails? "))
     if guess == coinflip:
         print(f"Your guess was correct! {CLAPPING_HANDS}")
         points += 1
     else:
         print("Your guess was incorrect.")
+
 
 if __name__ == "__main__":
     main()
