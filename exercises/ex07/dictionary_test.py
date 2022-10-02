@@ -4,6 +4,7 @@ __author__ = "730607227"
 import pytest
 from dictionary import invert, favorite_color, count
 
+
 def test_invert_one_element() -> None:
     """Testing invert on one element."""
     assert invert({"1": "3"}) == {"3": "1"}

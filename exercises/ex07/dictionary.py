@@ -16,7 +16,7 @@ def invert(input_dict: dict[str, str]) -> dict[str, str]:
 def favorite_color(input_dict: dict[str, str]) -> str:
     """Find the most popular favorite color."""
     color_popularity: dict[str, int] = {}
-    most_popular: list[str,int] = ["", 0]
+    most_popular: list[str, int] = ["", 0]
     for i in input_dict:
         if input_dict[i] in color_popularity:
             color_popularity[input_dict[i]] += 1
@@ -28,7 +28,7 @@ def favorite_color(input_dict: dict[str, str]) -> str:
     return most_popular[0]
     
 
-def count(input_list: list[str]) -> dict[str: int]:
+def count(input_list: list[str]) -> dict[str, int]:
     """Count the appearances by an element in a list."""
     output_dict: dict[str, int] = {}
     for i in input_list:
