@@ -7,7 +7,7 @@ def invert(input_dict: dict[str, str]) -> dict[str, str]:
     output_dict: dict[str, str] = {}
     for i in input_dict:
         if input_dict[i] in output_dict:
-            raise KeyError("Key Error.")
+            raise KeyError("KeyError")
         else:
             output_dict[input_dict[i]] = i
     return output_dict
